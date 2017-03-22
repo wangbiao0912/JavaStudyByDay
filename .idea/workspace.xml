@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a786e478-bce3-4361-9ade-911995128e6a" name="Default" comment="我的一些测试方法，mangoDb和lambda测试">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/mangoDb/firstTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/mangoDb/firstTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/com/mangoDb/firstTest.java" afterPath="$PROJECT_DIR$/src/main/test/com/mangoDb/firstTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,7 +49,7 @@
       <file leaf-file-name="firstTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/test/com/mangoDb/firstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
+            <state relative-caret-position="124">
               <caret line="233" column="47" lean-forward="false" selection-start-line="233" selection-start-column="47" selection-end-line="233" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1105,7 +1107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490147630485</updated>
-      <workItem from="1490147634767" duration="8887000" />
+      <workItem from="1490147634767" duration="8974000" />
     </task>
     <servers />
   </component>
@@ -1142,7 +1144,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8887000" />
+    <option name="totallyTimeSpent" value="8974000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1155,7 +1157,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1176,8 +1178,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23752712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23752712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21215352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1305,7 +1307,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/com/mangoDb/firstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
+        <state relative-caret-position="124">
           <caret line="233" column="47" lean-forward="false" selection-start-line="233" selection-start-column="47" selection-end-line="233" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
