@@ -2,6 +2,7 @@ package com.fastJson;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.fastJson.model.studentInfo;
 import org.junit.Test;
 
 import java.util.ArrayList;

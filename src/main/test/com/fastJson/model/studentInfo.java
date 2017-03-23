@@ -1,4 +1,4 @@
-package com.fastJson;
+package com.fastJson.model;
 
 import lombok.*;
 
