@@ -132,13 +132,16 @@ public class firstTest {
              * 2. 创建文档集合List<Document>
              * 3. 将文档集合插入数据库集合中 mongoCollection.insertMany(List<Document>) 插入单个文档可以用 mongoCollection.insertOne(Document)
              * */
-            Document document = new Document("title", "MongoDB").
-                    append("description", "database").
-                    append("likes", 100).
-                    append("by", "Fly");
-            List<Document> documents = new ArrayList<Document>();
-            documents.add(document);
-            collection.insertMany(documents);
+            for(int i=0;i<9999999;i++)
+            {
+                Document document = new Document("title", "MongoDB").
+                        append("description", "database").
+                        append("likes", i).
+                        append("by", "Fly");
+                List<Document> documents = new ArrayList<Document>();
+                documents.add(document);
+                collection.insertMany(documents);
+            }
             System.out.println("文档插入成功");
         }catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
