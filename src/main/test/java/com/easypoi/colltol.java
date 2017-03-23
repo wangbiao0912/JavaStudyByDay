@@ -1,8 +1,5 @@
 package com.easypoi;
 
-import jxl.Workbook;
-import org.jeecgframework.poi.excel.ExcelExportUtil;
-import org.jeecgframework.poi.excel.entity.ExportParams;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +17,8 @@ public class colltol {
         response.setHeader("content-Type", "application/vnd.ms-excel");
         // 下载文件的默认名称
         response.setHeader("Content-Disposition", "attachment;filename=user.xls");
- /*       List<User> list = userRepository.findAll();
-        Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams(), User.class, list);
+       /* List<user> list = userRepository.findAll();
+        Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams(), user.class, list);
         workbook.write(response.getOutputStream());*/
     }
 }

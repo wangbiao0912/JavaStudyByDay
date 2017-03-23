@@ -22,7 +22,7 @@ public class StartRunnerComponent implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("start init");
-        myTestR.doSomething();
+      //  myTestR.doSomething();
         log.info("end init");
     }
 }

@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ideabymvnwebapp" default="all">
+  
+  
+  <property file="ideabymvnwebapp.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.ane"/>
+    <include name="*.zip"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.maven:_com.alibaba:fastjson:1.2.28.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.carrotsearch:hppc:0.7.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/carrotsearch/hppc/0.7.1/hppc-0.7.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.4.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.4.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.8.4/jackson-dataformat-cbor-2.8.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.8.4.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.8.4/jackson-dataformat-smile-2.8.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.4.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.8.4/jackson-dataformat-yaml-2.8.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.google.guava:guava:19.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/google/guava/guava/19.0/guava-19.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.jayway.jsonpath:json-path:2.2.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/jayway/jsonpath/json-path/2.2.0/json-path-2.2.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.ning:compress-lzf:1.0.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/ning/compress-lzf/1.0.2/compress-lzf-1.0.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.spatial4j:spatial4j:0.5.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/spatial4j/spatial4j/0.5/spatial4j-0.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.tdunning:t-digest:3.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/tdunning/t-digest/3.0/t-digest-3.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.twitter:jsr166e:1.1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/com/twitter/jsr166e/1.1.0/jsr166e-1.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-cli:commons-cli:1.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-codec:commons-codec:1.10.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-codec/commons-codec/1.10/commons-codec-1.10.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-net:commons-net:3.5.classpath">
+    <pathelement location="${path.variable.maven_repository}/commons-net/commons-net/3.5/commons-net-3.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_dom4j:dom4j:1.6.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_io.netty:netty:3.10.5.final.classpath">
+    <pathelement location="${path.variable.maven_repository}/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.activation:activation:1.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/activation/activation/1.1/activation-1.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.mail:mail:1.4.7.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/mail/mail/1.4.7/mail-1.4.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.validation:validation-api:1.1.0.final.classpath">
+    <pathelement location="${path.variable.maven_repository}/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_joda-time:joda-time:2.9.5.classpath">
+    <pathelement location="${path.variable.maven_repository}/joda-time/joda-time/2.9.5/joda-time-2.9.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_junit:junit:4.12.classpath">
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.maven:_log4j:log4j:1.2.14.classpath">
+    <pathelement location="${path.variable.maven_repository}/log4j/log4j/1.2.14/log4j-1.2.14.jar"/>
+  </path>
+  
+  <path id="library.maven:_net.lingala.zip4j:zip4j:1.3.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/net/lingala/zip4j/zip4j/1.3.2/zip4j-1.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_net.minidev:accessors-smart:1.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/net/minidev/accessors-smart/1.1/accessors-smart-1.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_net.minidev:json-smart:2.2.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/net/minidev/json-smart/2.2.1/json-smart-2.2.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_net.sourceforge.jexcelapi:jxl:2.6.12.classpath">
+    <pathelement location="${path.variable.maven_repository}/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.commons:commons-lang3:3.2.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.commons:commons-pool2:2.4.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpclient:4.5.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpcore:4.4.5.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/httpcomponents/httpcore/4.4.5/httpcore-4.4.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.logging.log4j:log4j-api:2.6.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/logging/log4j/log4j-api/2.6.2/log4j-api-2.6.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.logging.log4j:log4j-core:2.6.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/logging/log4j/log4j-core/2.6.2/log4j-core-2.6.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.logging.log4j:log4j-slf4j-impl:2.6.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/logging/log4j/log4j-slf4j-impl/2.6.2/log4j-slf4j-impl-2.6.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.logging.log4j:log4j-web:2.6.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/logging/log4j/log4j-web/2.6.2/log4j-web-2.6.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-analyzers-common:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-analyzers-common/5.5.0/lucene-analyzers-common-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-backward-codecs:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-backward-codecs/5.5.0/lucene-backward-codecs-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-core:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-core/5.5.0/lucene-core-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-grouping:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-grouping/5.5.0/lucene-grouping-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-highlighter:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-highlighter/5.5.0/lucene-highlighter-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-join:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-join/5.5.0/lucene-join-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-memory:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-memory/5.5.0/lucene-memory-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-misc:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-misc/5.5.0/lucene-misc-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-queries:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-queries/5.5.0/lucene-queries-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-queryparser:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-queryparser/5.5.0/lucene-queryparser-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-sandbox:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-sandbox/5.5.0/lucene-sandbox-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-spatial3d:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-spatial3d/5.5.0/lucene-spatial3d-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-spatial:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-spatial/5.5.0/lucene-spatial-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.lucene:lucene-suggest:5.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/lucene/lucene-suggest/5.5.0/lucene-suggest-5.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.poi:poi-ooxml-schemas:3.10-final.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/poi/poi-ooxml-schemas/3.10-FINAL/poi-ooxml-schemas-3.10-FINAL.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.poi:poi-ooxml:3.10-final.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/poi/poi-ooxml/3.10-FINAL/poi-ooxml-3.10-FINAL.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.poi:poi:3.10-final.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/poi/poi/3.10-FINAL/poi-3.10-FINAL.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.xmlbeans:xmlbeans:2.3.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.assertj:assertj-core:2.5.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/assertj/assertj-core/2.5.0/assertj-core-2.5.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.elasticsearch:elasticsearch:2.3.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/elasticsearch/elasticsearch/2.3.3/elasticsearch-2.3.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.elasticsearch:securesm:1.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/elasticsearch/securesm/1.0/securesm-1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hamcrest:hamcrest-library:1.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hdrhistogram:hdrhistogram:2.1.6.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/hdrhistogram/HdrHistogram/2.1.6/HdrHistogram-2.1.6.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.jeecg:easypoi-annotation:2.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/jeecg/easypoi-annotation/2.3.1/easypoi-annotation-2.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.jeecg:easypoi-base:2.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/jeecg/easypoi-base/2.3.1/easypoi-base-2.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.jeecg:easypoi-web:2.3.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/jeecg/easypoi-web/2.3.1/easypoi-web-2.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.joda:joda-convert:1.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/joda/joda-convert/1.2/joda-convert-1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.json:json:20160810.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/json/json/20160810/json-20160810.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mockito:mockito-core:1.10.19.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mongodb:mongo-java-driver:3.4.2.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/mongodb/mongo-java-driver/3.4.2/mongo-java-driver-3.4.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.objenesis:objenesis:2.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/objenesis/objenesis/2.1/objenesis-2.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.ow2.asm:asm:5.0.3.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.projectlombok:lombok:1.16.12.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/projectlombok/lombok/1.16.12/lombok-1.16.12.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.skyscreamer:jsonassert:1.3.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/skyscreamer/jsonassert/1.3.0/jsonassert-1.3.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.slf4j:jcl-over-slf4j:1.7.21.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.slf4j:jul-to-slf4j:1.7.21.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/slf4j/jul-to-slf4j/1.7.21/jul-to-slf4j-1.7.21.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.slf4j:slf4j-api:1.7.21.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-autoconfigure:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-autoconfigure/1.4.2.RELEASE/spring-boot-autoconfigure-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-starter-log4j2:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-starter-log4j2/1.4.2.RELEASE/spring-boot-starter-log4j2-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-starter-test:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-starter-test/1.4.2.RELEASE/spring-boot-starter-test-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-starter:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-starter/1.4.2.RELEASE/spring-boot-starter-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-test-autoconfigure:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-test-autoconfigure/1.4.2.RELEASE/spring-boot-test-autoconfigure-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot-test:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot-test/1.4.2.RELEASE/spring-boot-test-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework.boot:spring-boot:1.4.2.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/boot/spring-boot/1.4.2.RELEASE/spring-boot-1.4.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-aop:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-beans:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-context:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-core:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-core/4.3.4.RELEASE/spring-core-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-expression:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-expression/4.3.4.RELEASE/spring-expression-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-test:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-test/4.3.4.RELEASE/spring-test-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-web:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-webmvc:4.3.4.release.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.yaml:snakeyaml:1.17.classpath">
+    <pathelement location="${path.variable.maven_repository}/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar"/>
+  </path>
+  
+  <path id="library.maven:_redis.clients:jedis:2.9.0.classpath">
+    <pathelement location="${path.variable.maven_repository}/redis/clients/jedis/2.9.0/jedis-2.9.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_stax:stax-api:1.0.1.classpath">
+    <pathelement location="${path.variable.maven_repository}/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_xml-apis:xml-apis:1.4.01.classpath">
+    <pathelement location="${path.variable.maven_repository}/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_ideabymvnwebapp.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.ideabymvnwebapp, clean.artifact.ideabymvnwebapp:war_exploded" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.ideabymvnwebapp" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.ideabymvnwebapp:war" value="${basedir}/target"/>
+    <property name="artifact.output.ideabymvnwebapp:war_exploded" value="${basedir}/target/IdeaByMvnWebapp-1.0-SNAPSHOT"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.IdeaByMvnWebapp-1.0-SNAPSHOT.war" value="${artifacts.temp.dir}/IdeaByMvnWebapp-1.0-SNAPSHOT.war"/>
+  </target>
+  
+  <target name="clean.artifact.ideabymvnwebapp:war_exploded" description="clean IdeaByMvnWebapp:war exploded artifact output">
+    <delete dir="${artifact.output.ideabymvnwebapp:war_exploded}"/>
+  </target>
+  
+  <target name="artifact.ideabymvnwebapp:war" depends="init.artifacts, artifact.ideabymvnwebapp:war_exploded" description="Build &#39;IdeaByMvnWebapp:war&#39; artifact">
+    <property name="artifact.temp.output.ideabymvnwebapp:war" value="${artifacts.temp.dir}/IdeaByMvnWebapp_war"/>
+    <mkdir dir="${artifact.temp.output.ideabymvnwebapp:war}"/>
+    <zip destfile="${temp.jar.path.IdeaByMvnWebapp-1.0-SNAPSHOT.war}">
+      <zipfileset dir="${artifact.output.ideabymvnwebapp:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.IdeaByMvnWebapp-1.0-SNAPSHOT.war}" tofile="${artifact.temp.output.ideabymvnwebapp:war}/IdeaByMvnWebapp-1.0-SNAPSHOT.war"/>
+  </target>
+  
+  <target name="artifact.ideabymvnwebapp:war_exploded" depends="init.artifacts, compile.module.ideabymvnwebapp" description="Build &#39;IdeaByMvnWebapp:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}"/>
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/classes">
+      <fileset dir="${ideabymvnwebapp.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib"/>
+    <copy file="${path.variable.maven_repository}/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+    <copy file="${path.variable.maven_repository}/org/projectlombok/lombok/1.16.12/lombok-1.16.12.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/lombok-1.16.12.jar"/>
+    <copy file="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/junit-4.12.jar"/>
+    <copy file="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/hamcrest-core-1.3.jar"/>
+    <copy file="${path.variable.maven_repository}/org/mongodb/mongo-java-driver/3.4.2/mongo-java-driver-3.4.2.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/mongo-java-driver-3.4.2.jar"/>
+    <copy file="${path.variable.maven_repository}/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/fastjson-1.2.28.jar"/>
+    <copy file="${path.variable.maven_repository}/org/jeecg/easypoi-web/2.3.1/easypoi-web-2.3.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/easypoi-web-2.3.1.jar"/>
+    <copy file="${path.variable.maven_repository}/org/jeecg/easypoi-base/2.3.1/easypoi-base-2.3.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/easypoi-base-2.3.1.jar"/>
+    <copy file="${path.variable.maven_repository}/org/apache/poi/poi/3.10-FINAL/poi-3.10-FINAL.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/poi-3.10-FINAL.jar"/>
+    <copy file="${path.variable.maven_repository}/org/apache/poi/poi-ooxml/3.10-FINAL/poi-ooxml-3.10-FINAL.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/poi-ooxml-3.10-FINAL.jar"/>
+    <copy file="${path.variable.maven_repository}/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/dom4j-1.6.1.jar"/>
+    <copy file="${path.variable.maven_repository}/org/apache/poi/poi-ooxml-schemas/3.10-FINAL/poi-ooxml-schemas-3.10-FINAL.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/poi-ooxml-schemas-3.10-FINAL.jar"/>
+    <copy file="${path.variable.maven_repository}/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/xmlbeans-2.3.0.jar"/>
+    <copy file="${path.variable.maven_repository}/stax/stax-api/1.0.1/stax-api-1.0.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/stax-api-1.0.1.jar"/>
+    <copy file="${path.variable.maven_repository}/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/commons-lang3-3.2.1.jar"/>
+    <copy file="${path.variable.maven_repository}/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
+    <copy file="${path.variable.maven_repository}/org/jeecg/easypoi-annotation/2.3.1/easypoi-annotation-2.3.1.jar" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/lib/easypoi-annotation-2.3.1.jar"/>
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}/META-INF"/>
+    <copy file="${basedir}/target/IdeaByMvnWebapp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.ideabymvnwebapp:war_exploded}">
+      <fileset dir="${basedir}/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.ideabymvnwebapp:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.ideabymvnwebapp:war, artifact.ideabymvnwebapp:war_exploded" description="Build all artifacts">
+    <mkdir dir="${artifact.output.ideabymvnwebapp:war}"/>
+    <copy todir="${artifact.output.ideabymvnwebapp:war}">
+      <fileset dir="${artifact.temp.output.ideabymvnwebapp:war}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
