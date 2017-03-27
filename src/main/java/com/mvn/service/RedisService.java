@@ -30,6 +30,7 @@ public class RedisService {
     private int nPort = 6379;
 
     public void someTest() {
+    	log.info("--");
         Jedis jedis = new Jedis("localhost");
         jedis.set("foo", "bars");
         log.info("foo:{}", jedis.get("foo"));
