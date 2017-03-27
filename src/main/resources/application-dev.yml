@@ -1,0 +1,39 @@
+#\u4FEE\u6539tomcat\u7684\u9ED8\u8BA4\u7684\u7AEF\u53E3\u53F7\uFF0C\u5C068080\u6539\u4E3A8888
+
+
+server:
+  servlet-path: /
+  port: 8888
+
+
+com:
+  web:
+    name: wangbiao
+    title:  了，放假了
+    action: ${com.web.name}星期五${com.web.title}
+#com.web.name=\u5F20\u4E09
+#\u4EA7\u751F\u4E00\u4E2A\u968F\u673A\u6570int10\u4EE5\u5185
+#com.web.random=${random.int[10]}
+#\u4EA7\u751F\u4E00\u4E2A\u968F\u673A\u6570int 0-10
+#com.web.random=${random.int[0,10]
+
+
+
+
+
+
+#application.properties 内容
+#修改tomcat的默认的端口号，将8080改为8888
+#server.port=8888
+
+#初始化參數注入
+#com.web.name=张三
+#com.web.name=今天
+#com.web.title=了，放假了
+#com.web.action=${com.web.name}星期五${com.web.title}
+
+
+#产生一个随机数int10以内
+#com.web.random=${random.int[10]}
+#产生一个随机数int 0-10
+#com.web.random=${random.int[0,10]

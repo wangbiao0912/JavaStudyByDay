@@ -1,13 +1,11 @@
 package com.easypoi.model;
 
-import org.jeecgframework.poi.excel.annotation.ExcelCollection;
-import org.jeecgframework.poi.excel.annotation.ExcelEntity;
-import org.jeecgframework.poi.excel.annotation.ExcelTarget;
+
 
 /**
  * Created by pc5 on 2017/3/23.
  */
-@ExcelTarget("courseEntity")
+/*@ExcelTarget("courseEntity")*/
 public class CourseEntity implements java.io.Serializable {
  /*   @ExcelTarget("courseEntity")*/
 
