@@ -15,5 +15,4 @@ public class Application {
         SpringApplication.run(Application.class);
         log.info("dataService starting success");
     }
-
 }

@@ -997,3 +997,243 @@ jvm内存使用情况
 当前JVM占用的内存总数:143654912
 内存使用率:1%
 [2017-03-27 13:52:54.364][INFO][com.mvn.Application.main(Application.java:14)]-dataService is starting...
+[2017-03-27 13:52:55.727][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting Application on DESKTOP-TFSMRU0 with PID 12568 (C:\gitAll\JavaStudyByDay\target\classes started by pc5 in C:\gitAll\JavaStudyByDay)
+[2017-03-27 13:52:55.733][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:665)]-The following profiles are active: dev
+[2017-03-27 13:52:56.016][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582)]-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6c130c45: startup date [Mon Mar 27 13:52:56 CST 2017]; root of context hierarchy
+[2017-03-27 13:53:00.149][INFO][com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:71)]-Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2017-03-27 13:53:00.467][INFO][org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431)]-Registering beans for JMX exposure on startup
+[2017-03-27 13:53:00.490][INFO][org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:245)]-No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[2017-03-27 13:53:00.505][INFO][com.mvn.compinent.StartRunnerComponent.run(StartRunnerComponent.java:27)]-start init
+[2017-03-27 13:53:00.508][INFO][com.mvn.repository.MyTestRepository.doSomething(MyTestRepository.java:13)]-系统启动时执行一次
+[2017-03-27 13:53:00.508][INFO][com.mvn.compinent.StartRunnerComponent.run(StartRunnerComponent.java:29)]-end init
+[2017-03-27 13:53:00.510][INFO][org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)]-Started Application in 5.836 seconds (JVM running for 7.778)
+[2017-03-27 13:53:00.511][INFO][com.mvn.Application.main(Application.java:16)]-dataService starting success
+[2017-03-27 13:53:00.513][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:114806320
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:53:00.514][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:53:00.514][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:53:01.560][INFO][com.mongodb.diagnostics.logging.SLF4JLogger.info(SLF4JLogger.java:76)]-Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) [mongo-java-driver-3.4.2.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_60]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongo-java-driver-3.4.2.jar:?]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongo-java-driver-3.4.2.jar:?]
+	... 3 more
+[2017-03-27 13:54:00.504][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:54:00.506][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:54:00.506][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:55:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:55:00.502][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:55:00.502][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:56:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:56:00.503][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:56:00.504][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:57:00.502][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:57:00.504][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:57:00.509][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:58:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:58:00.509][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:58:00.509][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 13:59:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 13:59:00.503][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 13:59:00.503][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:00:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:00:00.502][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:00:00.503][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:01:00.518][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:01:00.524][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:01:00.524][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:02:00.507][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:02:00.508][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:02:00.508][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:03:00.499][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:03:00.501][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:03:00.501][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:04:00.504][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:04:00.505][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:04:00.505][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:05:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:05:00.502][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:05:00.502][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:06:00.511][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:06:00.512][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:06:00.512][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:07:00.511][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:07:00.511][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:07:00.511][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:08:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:08:00.502][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:08:00.503][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:09:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:09:00.502][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:09:00.502][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:10:00.499][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113969744
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:10:00.505][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:10:00.505][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:11:00.530][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113141328
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:11:00.531][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:11:00.531][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:12:00.508][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113141328
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:12:00.511][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:12:00.511][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:13:00.510][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113141328
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:13:00.510][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:13:00.511][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:14:00.500][INFO][com.mvn.compinent.JVMComponent.outputJVMInfo(JVMComponent.java:24)]-
+jvm内存使用情况
+最大可用内存:2353004544
+当前JVM空闲内存:113141328
+当前JVM占用的内存总数:149422080
+内存使用率:1%
+[2017-03-27 14:14:00.503][INFO][com.mvn.compinent.StartBegin.doSomething(StartBegin.java:39)]-wangbiao星期五了，放假了..
+[2017-03-27 14:14:00.504][INFO][com.mvn.compinent.StartRunnerComponent.doSomething(StartRunnerComponent.java:44)]-wangbiao星期五了，放假了..
+[2017-03-27 14:15:35.901][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:319)]-Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.RedisServiceTest], using SpringBootContextLoader
+[2017-03-27 14:15:36.120][INFO][org.springframework.test.context.support.AbstractContextLoader.generateDefaultLocations(AbstractContextLoader.java:264)]-Could not detect default resource locations for test class [com.RedisServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2017-03-27 14:15:36.346][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:260)]-Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2017-03-27 14:15:36.368][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.instantiateListeners(AbstractTestContextBootstrapper.java:209)]-Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+[2017-03-27 14:15:36.369][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.instantiateListeners(AbstractTestContextBootstrapper.java:209)]-Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+[2017-03-27 14:15:36.372][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.instantiateListeners(AbstractTestContextBootstrapper.java:209)]-Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+[2017-03-27 14:15:36.373][INFO][org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:187)]-Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@441772e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7334aada, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d9b7cce, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d9e68d0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@42e99e4a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@14dd9eb7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@52e6fdee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c80d78a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@62150f9e]
+[2017-03-27 14:15:38.781][INFO][org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48)]-Starting RedisServiceTest on DESKTOP-TFSMRU0 with PID 9904 (started by pc5 in C:\gitAll\JavaStudyByDay)
+[2017-03-27 14:15:38.791][INFO][org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:665)]-The following profiles are active: dev
+[2017-03-27 14:15:38.883][INFO][org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:582)]-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Mon Mar 27 14:15:38 CST 2017]; root of context hierarchy
+[2017-03-27 14:15:39.267][INFO][org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)]-Started RedisServiceTest in 2.379 seconds (JVM running for 6.255)
+[2017-03-27 14:15:39.319][INFO][com.mvn.service.RedisService.someTest(RedisService.java:33)]---
+[2017-03-27 14:15:39.405][INFO][com.mvn.service.RedisService.someTest(RedisService.java:36)]-foo:bars
+[2017-03-27 14:15:39.500][INFO][org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:987)]-Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Mon Mar 27 14:15:38 CST 2017]; root of context hierarchy
+[2017-03-27 14:30:52.692][INFO][com.jdk.lambda.lanbdaUpdate(lambda.java:99)]-----------------------------
+[2017-03-27 14:32:22.927][INFO][com.jdk.lambda.lanbdaUpdate(lambda.java:99)]-----------------------------
+[2017-03-27 14:39:24.986][INFO][com.jdk.lambda.filter(lambda.java:131)]-Java 
+[2017-03-27 14:39:25.062][INFO][com.jdk.lambda.filter(lambda.java:131)]-Scala 
+[2017-03-27 14:39:25.062][INFO][com.jdk.lambda.filter(lambda.java:131)]-C++ 
+[2017-03-27 14:39:25.065][INFO][com.jdk.lambda.filter(lambda.java:131)]-Haskell 
+[2017-03-27 14:39:25.065][INFO][com.jdk.lambda.filter(lambda.java:131)]-Lisp 
+[2017-03-27 14:41:33.129][INFO][com.jdk.lambda.filter(lambda.java:129)]------------------------------
+[2017-03-27 14:41:33.155][INFO][com.jdk.lambda.filter(lambda.java:132)]-Java 
+[2017-03-27 14:41:33.156][INFO][com.jdk.lambda.filter(lambda.java:132)]-Scala 
+[2017-03-27 14:41:33.157][INFO][com.jdk.lambda.filter(lambda.java:132)]-C++ 
+[2017-03-27 14:41:33.157][INFO][com.jdk.lambda.filter(lambda.java:132)]-Haskell 
+[2017-03-27 14:41:33.157][INFO][com.jdk.lambda.filter(lambda.java:132)]-Lisp 
+[2017-03-27 14:41:33.158][INFO][com.jdk.lambda.filter(lambda.java:129)]------------------------------
+[2017-03-27 14:41:59.732][INFO][com.jdk.lambda.filter(lambda.java:129)]------------------------------
+[2017-03-27 14:41:59.836][INFO][com.jdk.lambda.filter(lambda.java:132)]-Java 
+[2017-03-27 14:41:59.837][INFO][com.jdk.lambda.filter(lambda.java:132)]-Scala 
+[2017-03-27 14:41:59.837][INFO][com.jdk.lambda.filter(lambda.java:132)]-C++ 
+[2017-03-27 14:41:59.837][INFO][com.jdk.lambda.filter(lambda.java:132)]-Haskell 
+[2017-03-27 14:41:59.837][INFO][com.jdk.lambda.filter(lambda.java:132)]-Lisp 
+[2017-03-27 14:41:59.839][INFO][com.jdk.lambda.filter(lambda.java:129)]------------------------------
