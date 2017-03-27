@@ -1,4 +1,4 @@
-package com;
+package com.springbootTest;
 
 import com.mvn.service.RedisService;
 import org.junit.After;
